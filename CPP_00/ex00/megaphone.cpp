@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 02:32:05 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/09/30 18:53:53 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/08 13:14:14 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	i = 1;
     if (ac == 1)
 	{
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
     }
 	while (av[i])
 	{

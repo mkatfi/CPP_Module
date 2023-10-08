@@ -2,22 +2,25 @@ NAME = PhoneBook
 
 SRC = main.cpp \
 	  Contact.cpp \
+	  Add_Search.cpp \
 
-OBJ = $(SRC:.cpp=.o)
+CXX = c++
 
-CC = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(NAME)
+OBJ = ${SRC:.cpp=.o}
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+all: ${NAME}
+
+
+${NAME}: ${OBJ}
+	$(CXX) ${CXXFLAGS} $(OBJ) -o ${NAME}
 
 clean:
-	rm -rf $(OBJ)
+	rm -f ${OBJ}
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f ${NAME}
 
 re: fclean all
