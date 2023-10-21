@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:35:31 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/13 20:40:21 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 18:08:09 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,12 @@ int main()
     std :: string* stringPTR = &val;
     std :: string& stringREF = val;
 
-    std :: cout << val <<  " :" << &val << std :: endl;
-    std :: cout << *stringPTR << " :" << stringPTR << std :: endl;
-    std :: cout << stringREF << " :" << &stringREF << std :: endl;
+    std :: cout << val<<std::endl;
+    std :: cout << *stringPTR<<std::endl;
+    std :: cout << stringREF<<std::endl;
+
+    std::cout<<std::endl;
+    std::cout << &val << std :: endl;
+    std::cout << stringPTR << std :: endl;
+    std::cout << &stringREF << std :: endl;
 }

@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 20:52:52 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/15 21:52:20 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 18:28:02 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,29 @@
 
 HumanB::HumanB(std::string name)
 {
-  _name = name;
+  this->name = name;
+  this->weapon = NULL;
 }
 
 HumanB::~HumanB()
 {
     return;
 }
-// void HumanB::setHumanB(std::string name)
-// {
-//     _name = name;
-// }
 
 std::string HumanB::getHumanB()
 {
-    return _name;
+    return (name);
 }
 
 void HumanB::setWeapon(Weapon& weapon)
 {
-    _weapon = &weapon; 
+    this->weapon = &weapon;
 }
 
 void HumanB::attack()
 {
-    if (_weapon)
-    {
-        std::cout << _name << " attacks with their " << _weapon->getType() << std::endl;
-    }
+    if (weapon)
+        std::cout << name << " attacks with their " << weapon->getType() << std::endl;
     else
-    {
-        std::cout << _name << " attacks with their bare hands!" << std::endl;
-    }
+        std::cout << name << " attacks with their bare hands!" << std::endl;
 }

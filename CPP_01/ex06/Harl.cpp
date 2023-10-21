@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 22:46:34 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/18 22:55:30 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 18:59:04 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void    Harl::complain( std:: string level )
         i++ ;
     switch (i)
     {
-    case    0: 
+    case    0:
         this->debug();
     case    1: 
         this->info();

@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 22:07:20 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/15 16:28:35 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 18:21:29 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 class  Weapon
 {
 private:
-        std::string Club;
+    std::string type;
 public:
     Weapon(const std::string& weaponName);
-    ~ Weapon();
-    std::string getType();
-    void setType(std :: string cl);
-    
+    ~Weapon();
+    const std::string& getType();
+    void setType(std::string cl);
 };
 
 #endif

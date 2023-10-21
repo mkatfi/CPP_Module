@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:59:17 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/18 22:51:57 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 18:55:14 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Harl::~Harl()
 void    Harl::complain( std:: string level ) 
 {
     void (Harl::*funcs[4])() = 
-    { 
+    {
         &Harl::debug, 
         &Harl::info, 
         &Harl::warning, 

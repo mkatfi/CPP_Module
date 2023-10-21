@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:56:37 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/18 18:41:01 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 18:49:39 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,11 @@ private:
     void    info( void );
     void    warning( void );
     void    error( void );
-
-
 public:
     Harl();
     ~Harl();
 
-    void        complain( std:: string level );
-
+    void    complain( std:: string level );
 };
 
 #endif

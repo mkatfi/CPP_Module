@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:20:57 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/13 11:39:04 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 17:57:25 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Zombie
 {
 private:
-        std ::string Name;
+    std ::string name;
 public:
     void announce( void );
     void setName(std ::string name);

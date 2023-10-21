@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:44:52 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/12 16:10:52 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 17:54:50 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 #define ZOMBIE_H
 
 #include <iostream>
-#include <string>
 
 class Zombie
 {
 private:
-        std ::string Name;
+    std::string name;
 public:
     void announce( void );
     Zombie();
@@ -27,6 +26,6 @@ public:
     ~Zombie();
 };
 
-void randomChump(std::string name);
-Zombie* newZombie(std::string name);
+void randomChump(std::string Name);
+Zombie* newZombie(std::string Name);
 #endif

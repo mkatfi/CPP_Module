@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:20:19 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/18 18:48:30 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 18:54:29 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,6 @@ int main()
     std::string input;
     Harl        harl;
 
-    while(1)
-    {
-        std::cout << "Enter a level: ";
-        std::cin >> input;
-        harl.complain(input);
-        if(input.compare("exit"))
-            break;
-    }
+    harl.complain("DEBUG");
     return(0);
 }

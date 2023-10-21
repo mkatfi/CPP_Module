@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:20:51 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/13 20:42:32 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/21 17:58:37 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,19 @@
 
 Zombie :: Zombie ()
 {
-    //  std ::cout <<   "The structor is called ==>\n";
 }
 
 Zombie :: ~Zombie()
 {
-    std ::cout << Name <<   ":The destructor is called \n";
+    std ::cout << name <<   ":The destructor is called \n";
 }
 
 void Zombie::announce( void )
 {
-    std :: cout << Name << ": BraiiiiiiinnnzzzZ...\n";
+    std :: cout << name << ": BraiiiiiiinnnzzzZ...\n";
 }
 
 void Zombie :: setName(std ::string name)
 {
-    Name = name;
+    this->name = name;
 }
