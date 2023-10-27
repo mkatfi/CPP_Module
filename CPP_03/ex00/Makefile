@@ -1,8 +1,8 @@
 NAME = ./a.out
 
 SRC = main.cpp\
+	ClapTrap.cpp\
 
-	
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

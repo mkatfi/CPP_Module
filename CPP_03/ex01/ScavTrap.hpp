@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 14:52:02 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/26 17:05:08 by mkatfi           ###   ########.fr       */
+/*   Created: 2023/10/26 18:09:46 by mkatfi            #+#    #+#             */
+/*   Updated: 2023/10/26 18:12:47 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-Zombie :: Zombie ()
-{
-}
-Zombie :: Zombie (std::string Name)
-{
-    name = Name;
-}
+#include<iostream>
+#include<string>
 
-Zombie :: ~Zombie()
+class ScavTrap : public ClapTrap
 {
-    std ::cout << name <<   ":The destructor is called \n";
-}
-
-void Zombie::announce( void )
-{
-    std :: cout << name << ": BraiiiiiiinnnzzzZ...\n";
-}
+public:
+   ScavTrap();
+   ScavTrap(std::string Name);
+   ScavTrap(const ScavTrap &old);
+   ~ScavTrap();
+   void guardGate();
+};
+#endif

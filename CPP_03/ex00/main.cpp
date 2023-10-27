@@ -5,30 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 20:51:49 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/26 17:15:13 by mkatfi           ###   ########.fr       */
+/*   Created: 2023/10/25 21:46:30 by mkatfi            #+#    #+#             */
+/*   Updated: 2023/10/25 23:05:58 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include"ClapTrap.hpp"
 
 int main()
 {
-    {
-        Weapon club = Weapon("crude spiked club");
-        HumanA bob("Bob", club);
-        bob.attack();
-        club.setType("some other type of club");
-        bob.attack();
-    }
-    {
-        Weapon club = Weapon("crude spiked club");
-        HumanB jim("Jim");
-        jim.setWeapon(club);
-        jim.attack();
-        club.setType("some other type of club");
-        jim.attack();
-    }
-    return 0;
+    ClapTrap c2("MAX");
+    c2.attack("FOLan");
+    c2.takeDamage(9);
+    c2.beRepaired(5);
+    c2.attack("FOOOOOOO"); 
 }

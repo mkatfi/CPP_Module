@@ -1,4 +1,4 @@
-NAME = ex04
+NAME = ./sed
 
 SRC = main.cpp\
 

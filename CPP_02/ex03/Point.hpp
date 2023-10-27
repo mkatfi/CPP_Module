@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 14:52:02 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/26 17:05:08 by mkatfi           ###   ########.fr       */
+/*   Created: 2023/10/25 14:19:25 by mkatfi            #+#    #+#             */
+/*   Updated: 2023/10/25 14:22:18 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef POINT_HPP
+#define POINT_HPP
 
-Zombie :: Zombie ()
-{
-}
-Zombie :: Zombie (std::string Name)
-{
-    name = Name;
-}
+#include<iostream>
+#include<string>
 
-Zombie :: ~Zombie()
+class Point
 {
-    std ::cout << name <<   ":The destructor is called \n";
+    private:
+    Fiexd const x;
+    Fiexd const y;
 }
 
-void Zombie::announce( void )
-{
-    std :: cout << name << ": BraiiiiiiinnnzzzZ...\n";
-}
+#endif

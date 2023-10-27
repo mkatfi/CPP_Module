@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 14:52:02 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/26 17:05:08 by mkatfi           ###   ########.fr       */
+/*   Created: 2023/10/19 22:27:19 by mkatfi            #+#    #+#             */
+/*   Updated: 2023/10/20 20:43:56 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-Zombie :: Zombie ()
-{
-}
-Zombie :: Zombie (std::string Name)
-{
-    name = Name;
-}
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-Zombie :: ~Zombie()
-{
-    std ::cout << name <<   ":The destructor is called \n";
-}
+#include <iostream>
+#include <string>
 
-void Zombie::announce( void )
+class   Fixed
 {
-    std :: cout << name << ": BraiiiiiiinnnzzzZ...\n";
-}
+private:
+    int a;
+    static const int b; 
+
+public:
+    Fixed();
+    Fixed(Fixed & old);
+    Fixed&  operator=(const Fixed& rhs);
+    ~Fixed();
+    int getRawBits( void ) const;
+    void setRawBits( int const raw );
+};
+
+#endif

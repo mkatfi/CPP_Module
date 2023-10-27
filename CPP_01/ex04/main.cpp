@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:47:33 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/21 22:47:06 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/26 17:17:49 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ void replaceInFile(std::string fileName, std::string oldWord, std::string newWor
         MyFile.close();
         return;
     }
-     std::string line;
+    std::string line;
+    if (oldWord.empty())
+        return;
     while (getline(MyFile, line)) 
     {
         std::string modifiedLine;

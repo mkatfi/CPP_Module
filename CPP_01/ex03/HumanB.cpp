@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 20:52:52 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/21 18:28:02 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/10/22 22:22:02 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void HumanB::attack()
     if (weapon)
         std::cout << name << " attacks with their " << weapon->getType() << std::endl;
     else
-        std::cout << name << " attacks with their bare hands!" << std::endl;
+        std::cout << name << " attacks with their !!!!!!" << std::endl;
 }
