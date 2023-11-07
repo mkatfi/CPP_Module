@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 14:19:18 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/25 14:19:20 by mkatfi           ###   ########.fr       */
+/*   Created: 2023/11/02 13:09:38 by mkatfi            #+#    #+#             */
+/*   Updated: 2023/11/02 15:43:34 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include"Fixed.hpp"
 #include <cmath>
@@ -153,7 +154,7 @@ Fixed  Fixed::operator*(const Fixed& rhs) const
 {
     Fixed   res;
 
-    res.FixPoint = (float)this->getRawBits() / 256 * rhs.getRawBits();
+    res.FixPoint = this->getRawBits()  * rhs.getRawBits() / 256;
     return (res);
 }
 
@@ -161,7 +162,7 @@ Fixed  Fixed::operator/(const Fixed& rhs) const
 {
     Fixed   res;
 
-    res.FixPoint = (float)this->getRawBits() / rhs.getRawBits() * 256;
+    res.FixPoint = this->getRawBits() * 256 / rhs.getRawBits() ;
     return (res);
 }
 

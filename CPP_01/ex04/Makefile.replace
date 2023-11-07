@@ -1,9 +1,6 @@
-NAME = ./a.out
+NAME = ./sed
 
 SRC = main.cpp\
-	Fixed.cpp\
-	Point.cpp\
-	bsq.cpp\
 
 CXX = c++
 

@@ -6,19 +6,11 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 20:12:14 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/22 20:35:03 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/02 14:48:51 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Fixed.hpp"
-
-Fixed&  Fixed::operator = (const Fixed& rhs)
-{
-    std::cout << "Copy assignment operator called\n";
-    
-    this->FixPoint = rhs.getRawBits();
-    return *this;
-}
 
 std::ostream& operator<<(std::ostream &output, const Fixed& rhs) 
 {
@@ -40,11 +32,19 @@ Fixed::Fixed(int i)
 
 Fixed::Fixed(float j) 
 {
-    FixPoint = (j * (1 << NumFlotingPoint));
+    FixPoint = roundf(j * (1 << NumFlotingPoint));
     std::cout << "Float constructor called\n";
 }
 
-Fixed::Fixed( const Fixed & old)
+Fixed&  Fixed::operator=(const Fixed& rhs)
+{
+    std::cout << "Copy assignment operator called\n";
+    
+    this->FixPoint = rhs.getRawBits();
+    return *this;
+}
+
+Fixed::Fixed(const Fixed& old)
 {
     std::cout << "Copy constructor called\n";
     *this = old;

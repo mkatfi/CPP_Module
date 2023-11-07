@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:09:42 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/11/07 02:20:40 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/07 02:17:22 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ ScavTrap::ScavTrap()
 ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
 {
     this->HitPoint = 100;
-    this->EnergyPoint = 50;
-    this->AttackDamage = 20;
+    this->EnergyPoint= 50;
+    this->AttackDamage= 20;
      // std::cout << "Default constructor called\n";
 }
 
@@ -43,11 +43,16 @@ ScavTrap::~ScavTrap()
     // std::cout << "Destructor called\n";
 }
 
+// void ScavTrap::guardGate()
+// {
+//      std::cout << " ClapTrap "  << Name << " attacks "  << target <<" causing " << AttackDamage <<  " points of damage!\n";
+// }
+
 void    ScavTrap::attack( std::string const& target ) 
 {
     if (this->HitPoint > 0 && this->EnergyPoint > 0) 
     {
-        std::cout << " ScavTrap " << this->Name << " attacks " << target << " causing " << this->AttackDamage << " points of damage !" << std::endl;
+        std::cout << " ScavTrap " << this->Name << " attacks " << target << " at range, causing " << this->AttackDamage << " points of damage !" << std::endl;
         this->EnergyPoint -= 1;
     }
 }

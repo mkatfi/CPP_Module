@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 20:20:17 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/25 22:59:39 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/03 16:31:46 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ ClapTrap::ClapTrap()
 {
       
 }
+
 ClapTrap::ClapTrap(std::string name)
 {
       Name = name;
@@ -24,6 +25,7 @@ ClapTrap::ClapTrap(std::string name)
       AttackDamage= 0;
     // std::cout << "Default constructor called\n";
 }
+
 ClapTrap::ClapTrap(const ClapTrap &old)
 {
       // std::cout << "Copy constructor called\n";
@@ -38,10 +40,12 @@ ClapTrap&  ClapTrap::operator=(const ClapTrap &rhs)
       this->AttackDamage = rhs.AttackDamage;
       return(*this);
 }
+
 ClapTrap::~ClapTrap()
 {
       // std::cout << "Destructor called\n";
 }
+
 void ClapTrap::attack(const std::string& target)
 {
       if (this->HitPoint > 0 && this->EnergyPoint > 0)
@@ -50,6 +54,7 @@ void ClapTrap::attack(const std::string& target)
             this->EnergyPoint--;    
       }
 }
+
 void ClapTrap::takeDamage(unsigned int amount)
 {
       if (this->HitPoint > 0 && this->EnergyPoint > 0)
@@ -57,6 +62,7 @@ void ClapTrap::takeDamage(unsigned int amount)
             this->HitPoint = this->HitPoint - amount;
       }
 }
+
 void ClapTrap::beRepaired(unsigned int amount)
 {
       if (this->HitPoint > 0 && this->EnergyPoint > 0)

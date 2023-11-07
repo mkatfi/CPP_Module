@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 20:20:17 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/11/07 02:07:36 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/07 02:12:10 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ ClapTrap::~ClapTrap()
 {
       // std::cout << "Destructor called\n";
 }
-void ClapTrap::attack(const std::string& target)
+void ClapTrap::attack( const std::string& target)
 {
       if (this->HitPoint > 0 && this->EnergyPoint > 0)
       {

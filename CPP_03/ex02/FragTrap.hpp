@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 21:46:30 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/11/05 15:54:44 by mkatfi           ###   ########.fr       */
+/*   Created: 2023/10/26 18:09:46 by mkatfi            #+#    #+#             */
+/*   Updated: 2023/11/07 02:10:56 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-int main()
-{
-    ClapTrap c2("MAX");
+#include "ClapTrap.hpp"
 
-    c2.attack("FOLan");
-    c2.takeDamage(9);
-    c2.beRepaired(5);
-    c2.attack("FOOOOOOO");
-}
+class FragTrap : public ClapTrap
+{   
+public:
+   FragTrap();
+   FragTrap(std::string Name);
+   FragTrap(const FragTrap &old);
+   FragTrap& operator=(const FragTrap& rhs);
+   ~FragTrap();
+   
+   void highFivesGuys(void);
+};
+#endif

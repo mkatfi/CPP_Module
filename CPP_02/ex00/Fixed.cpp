@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:17:05 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/24 20:17:04 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/06 17:52:43 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 const int Fixed::b = 8;
 
-Fixed&  Fixed::operator=(const Fixed& rhs)
+Fixed&  Fixed::operator=(const Fixed& rhs)  
 {
     std::cout << "Copy assignment operator called\n";
     
@@ -27,7 +27,7 @@ Fixed::Fixed()
     std::cout << "Default constructor called\n";
     a = 0;
 }
-Fixed::Fixed(Fixed & old)
+Fixed::Fixed(const Fixed & old)
 {
     std::cout << "Copy constructor called\n";
     *this = old;

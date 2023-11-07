@@ -1,9 +1,9 @@
 NAME = ./a.out
 
 SRC = main.cpp\
-	Fixed.cpp\
-	Point.cpp\
-	bsq.cpp\
+	ClapTrap.cpp\
+	ScavTrap.cpp\
+	FragTrap.cpp\
 
 CXX = c++
 

@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 23:26:50 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/10/25 12:57:49 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/02 15:42:56 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,7 +153,7 @@ Fixed  Fixed::operator*(const Fixed& rhs) const
 {
     Fixed   res;
 
-    res.FixPoint = (float)this->getRawBits() / 256 * rhs.getRawBits();
+    res.FixPoint = this->getRawBits()  * rhs.getRawBits() / 256;
     return (res);
 }
 
@@ -161,7 +161,7 @@ Fixed  Fixed::operator/(const Fixed& rhs) const
 {
     Fixed   res;
 
-    res.FixPoint = (float)this->getRawBits() / rhs.getRawBits() * 256;
+    res.FixPoint = this->getRawBits() * 256 / rhs.getRawBits();
     return (res);
 }
 
