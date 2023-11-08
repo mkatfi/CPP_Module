@@ -28,7 +28,7 @@ FragTrap& FragTrap::operator=(const FragTrap& rhs)
 
 FragTrap::~FragTrap()
 {
-    std::cout << "destractore is called\n";
+    // std::cout << "destractore is called\n";
 }
 
 void FragTrap::highFivesGuys(void)

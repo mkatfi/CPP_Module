@@ -15,7 +15,7 @@ public:
     DiamondTrap( std::string name );
     ~DiamondTrap();
     DiamondTrap& operator=(const DiamondTrap& rhs);
-    using   ScavTrap::attack;
+    void attack(const std::string& target);
     void    whoAmI( void );
 };
 

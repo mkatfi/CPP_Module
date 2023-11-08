@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:09:42 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/11/07 02:17:22 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/07 23:06:56 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void    ScavTrap::attack( std::string const& target )
         std::cout << " ScavTrap " << this->Name << " attacks " << target << " at range, causing " << this->AttackDamage << " points of damage !" << std::endl;
         this->EnergyPoint -= 1;
     }
+    else 
+        std::cout << " it is daed\n";
 }
 
 void    ScavTrap::guardGate() 

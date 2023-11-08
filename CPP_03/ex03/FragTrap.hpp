@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:09:46 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/11/07 02:16:47 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/11/07 12:47:31 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class FragTrap : virtual public ClapTrap
 {
 public:
-   FragTrap();
-   FragTrap(std::string Name);
-   FragTrap(const FragTrap &old);
+  FragTrap();
+  FragTrap(std::string Name);
+  FragTrap(const FragTrap &old);
   FragTrap& operator=(const FragTrap& rhs);
-   ~FragTrap();
+  ~FragTrap();
    
   void highFivesGuys(void);
 };
