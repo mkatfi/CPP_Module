@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/11 13:10:59 by mkatfi            #+#    #+#             */
+/*   Updated: 2023/11/13 00:25:04 by mkatfi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef Dog_HPP
+#define Dog_HPP
+#include "AAnimal.hpp"
+#include "Brain.hpp"
+
+class Dog : public AAnimal
+{
+    private:
+        Brain* BrainDog;
+    public:
+    Dog();
+    ~Dog();
+    Dog (const Dog &old);
+    Dog& operator=(const Dog &opDog);
+    void makeSound()const;
+};
+
+#endif
