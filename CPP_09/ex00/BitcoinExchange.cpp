@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 23:19:16 by mkatfi            #+#    #+#             */
-/*   Updated: 2024/02/19 23:52:42 by mkatfi           ###   ########.fr       */
+/*   Updated: 2024/02/20 21:46:25 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Bitcoin::Bitcoin()
         ss << line;
         std::getline(ss, date, ',');
         std::getline(ss, value);
-        float val = atof(value.c_str());
+        double val = atof(value.c_str());
         this->myMap.insert(make_pair(date, val));
         ss.clear();
     }
@@ -64,15 +64,7 @@ int Bitcoin::check_pipe(std::string line, char c)
     }
     return (cont);
 }
-// void Bitcoin::display_map()
-// {
-//     std::map<std::string, float>::iterator iter = myMap.begin();
-//     while (iter != myMap.end())
-//     {
-//         std::cout << iter->first <<"   "<< iter->second << std::endl;
-//         iter++;
-//     }
-// }
+
 void check_dach(std::string date, std:: string bad)
 {
     size_t i = 0;
@@ -159,7 +151,6 @@ std::string    Bitcoin::is_float(std::string str)
 {
     int p = 0;
     int plus = 0;
-    // int digit = 0;
     std::string characters = "0123456789";
     unsigned int i = 0;
 
@@ -168,11 +159,6 @@ std::string    Bitcoin::is_float(std::string str)
         throw   std::logic_error("not a positive number.");
     while (i < str.size())
     {
-        // if(str[i] == ' ')
-        // {
-        //     if(!std::isdigit(str[i + 1]) && str[i + 1] != ' ' && str[i + 1] != '+')
-        //         throw   std::logic_error("not a valide 1 number.");
-        // }
         if (str[i] != ' ')
         {
             if (str[i] != '+' && str[i] != '.')
@@ -187,7 +173,7 @@ std::string    Bitcoin::is_float(std::string str)
             else if (str[i] == '+')
             {
                 if (!std::isdigit(str[i + 1]) || std::isdigit(str[i - 1]))
-                    throw   std::logic_error("not a valide 2 number.");
+                    throw   std::logic_error(" not a valide number.");
                 plus++;
             }
         }
@@ -197,7 +183,7 @@ std::string    Bitcoin::is_float(std::string str)
             while (str[j])
             {
                 if (str[j] != ' ')
-                    throw   std::logic_error("not a valide number.");
+                    throw   std::logic_error(" this is not a valide number.");
                 j++;
             }
         }
@@ -223,7 +209,7 @@ void Bitcoin::print_line(std::string date, std::string value , std::string bad)
     iss >> val;
     if (val > 1000)
         throw   std::logic_error(std::string("too large a number."));
-    std::cout << std::setprecision(15) << date << " => " << val << " = " << val * it->second << std::endl;
+    std::cout << date << " => " << val << " = " << val * it->second << std::endl;
 }
 void    Bitcoin::read_line(std::string line)
 {

@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 00:21:13 by mkatfi            #+#    #+#             */
-/*   Updated: 2024/02/16 20:35:44 by mkatfi           ###   ########.fr       */
+/*   Updated: 2024/02/20 16:42:49 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void    RPN::RPN_result(char *arg)
             b = this->res.top();
             res.pop();
             a = this->res.top();
-            // std::cout << " <<== " <<  b<< " > " << arg[i] << " < "<< a << " ==>> \n";
             res.pop();
             if (arg[i] == '+')
                 res.push(a + b);
