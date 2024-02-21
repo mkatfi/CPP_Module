@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 23:18:32 by mkatfi            #+#    #+#             */
-/*   Updated: 2024/02/16 10:17:03 by mkatfi           ###   ########.fr       */
+/*   Updated: 2024/02/21 20:24:22 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ std::vector<int>   check_number_insert(int ac, char**av)
     {
         unsigned int num;
         std::istringstream iss(av[i]);
-        iss>> num;
+        iss >> num;
 
         if (MaxNumber < num)
             throw std::runtime_error("Error : number grand to max!");
@@ -53,6 +53,10 @@ std::vector<int>   check_number_insert(int ac, char**av)
     std::vector<int> ver;
     for (int k = 1; k < ac; k++)
     {
+        if (av[k][0] == '\0')
+        {
+            throw std::runtime_error("Error : Invalid number!");
+        }
         int val = std::atoi(av[k]);
         ver.push_back(val);
     }
@@ -156,6 +160,10 @@ std::deque<int>   check_number_insert_deque(int ac, char**av)
     std::deque<int> ver;
     for (int k = 1; k < ac; k++)
     {
+        if (av[k][0] == '\0')
+        {
+            throw std::runtime_error("Error : Invalid number!");
+        }
         int val = std::atoi(av[k]);
         ver.push_back(val);
     }

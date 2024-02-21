@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 00:21:13 by mkatfi            #+#    #+#             */
-/*   Updated: 2024/02/20 16:42:49 by mkatfi           ###   ########.fr       */
+/*   Updated: 2024/02/21 20:30:21 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void    RPN::RPN_result(char *arg)
     {
         if (RPN_characters.find(arg[i]) == std::string::npos)
             throw   std::logic_error("Error");
-        if (std::isdigit(arg[i]))
+        if (std::isdigit(arg[i]) && arg[i + 1] == ' ')
             res.push(arg[i] - 48);
         else if (!std::isspace(arg[i]))
         {
